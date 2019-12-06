@@ -1,5 +1,12 @@
-.forecastSummary {
+.forecast-summaries {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 10px;
+    width: 90%;
+}
 
+.icon{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 175%;
 }
