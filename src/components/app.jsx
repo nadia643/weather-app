@@ -12,12 +12,25 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      selectedDate: this.props.forecasts[0].date,
+      selectedDate: 0,
+      forecasts: [],
+      location: {
+        city: '',
+        country: '',
+      }
     };
+    this.handleForecastSelect = this.handleForecastSelect.bind(this);
+  }
+
+  handleForecastSelect(date) {
+    this.setState({
+      selectedDate: date,
+    });
   }
 
   render() {
-    const selectedForecast = this.props.forecasts.find(forecast => forecast.date === this.state.selectedDate);
+    const selectedForecast =
+    this.state.forecasts.find(forecast => forecast.date === this.state.selectedDate);
 
     return (
       <div className="forecast">
@@ -25,8 +38,7 @@ class App extends React.Component {
           city={this.state.location.city}
           country={this.state.location.country}
         />
-        <ForecastSummaries forecasts={this.state.forecasts} />
-        <ForecastDetails forecast={selectedForecast} />
+        <ForecastSummaries forecasts={this.state.forecasts} onForecastSelect={this.handleForecastSelect} />        <ForecastDetails forecast={selectedForecast} />
       </div>
     );
   }
