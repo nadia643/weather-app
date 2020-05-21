@@ -9,13 +9,11 @@ const ForecastSummary = props => {
     <div className="each-box">
       <span className="date">{Moment(props.date).format('ddd Do MMM')}</span>
       <div className="icon">
-        <WeatherIcon name="owm" iconId={props.icon} />
+        <WeatherIcon className="icon" name="owm" iconId={props.icon} />
       </div>
-      <span className="temperature">{props.temperature}°c</span>
-      <br />
+      <span className="temperature">{props.temperature}°c</span> 
       <span className="description">{props.description}</span>
-      <br />
-      <button className="more-details" onClick={() => props.onSelect(props.date)}>More details</button>
+      {/* <button className="more-details" onClick={() => props.onSelect(props.date)}>More details</button> */}
     </div>
   );
 };

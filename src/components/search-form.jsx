@@ -13,8 +13,8 @@ class SearchForm extends Component {
 
   handleInputChange(e) {
     if (e.charCode !== 13) {
-        this.setState({ searchText: e.target.value });
-      }
+      this.setState({ searchText: e.target.value });
+    }
   }
 
   handleCityChange(e) {
@@ -28,19 +28,22 @@ class SearchForm extends Component {
   render() {
     return (
       <div>
-        <input 
-            type="text" 
-            placeholder="Insert city name here"
-            onChange={this.handleInputChange}
-            onKeyPress={this.handleCityChange}
-            value={this.state.searchText} 
-            />
-        <button 
-            type="button"
-            onClick={this.handleCityChange}
-            >Search</button>
+        <input
+          type="text"
+          placeholder="Insert city name here"
+          onChange={this.handleInputChange}
+          onKeyPress={this.handleCityChange}
+          value={this.state.searchText}
+        />
+        <button
+          className="search-btn"
+          type="button"
+          onClick={this.handleCityChange}
+        >
+              Search
+        </button>
       </div>
-    )
+    );
   }
 }
 export default SearchForm;
