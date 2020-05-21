@@ -77,12 +77,12 @@ class App extends React.Component {
   }
 }
 
-// App.propTypes = {
-//   location: PropTypes.shape({
-//     city: PropTypes.string,
-//     country: PropTypes.string,
-//   }).isRequired,
-//   forecasts: PropTypes.array.isRequired,
-// };
+App.propTypes = {
+  location: PropTypes.shape({
+    city: PropTypes.string,
+    country: PropTypes.string,
+  }).isRequired,
+  forecasts: PropTypes.array.isRequired,
+};
 
 export default App;

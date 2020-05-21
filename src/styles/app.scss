@@ -12,26 +12,22 @@ body {
     text-align: center;
     position: relative;
     top: 100px;
-  }
-  
-    .formattedDate {
-      font-size: 30px;
-      font-weight: bold;
-    }
+}
 
+.formattedDate {
+    font-size: 30px;
+    font-weight: bold;
+}
 
-
-    .forecast-summaries {
-        display: grid;    
-        grid-template-columns: repeat(5, 1fr);
-        justify-content: space-between;
-        margin-top: 100px;
+.forecast-summaries {
+    display: grid;    
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: space-between;
+    margin-top: 100px;
 
     
-    }
-    
-    
-    .each-box {
-        display: grid;
-        justify-content: space-around;
-    }
+}
+.each-box {
+    display: grid;
+    justify-content: space-around;
+}
